@@ -1,0 +1,39 @@
+{% load static %}
+
+{% include "userheader.html" %}
+
+{% include "usernav.html" %}
+
+
+<div style="font-size: larger; margin: 20px;" >
+<!-- Menu starts -->
+     Share Your Notes
+	<br class="clearfix" />
+</div>
+    <form method="post" action="/sharenotes/" enctype="multipart/form-data">
+{% csrf_token %}	
+<table cellspacing="20">
+    <tr>
+<td>Title</td>
+<td><input class="inpt" type="text" name="title"/></td>	
+</tr>
+<tr>
+<td>Category</td>
+<td><input class="inpt" type="text" name="category"/></td>	
+</tr>	
+<tr>
+<td>Description</td>
+<td><textarea rows="5" name="description"></textarea></td>	
+</tr>
+<tr>
+<td>Upload file</td>
+<td><input type="file" name="file"></td>
+</tr>
+<tr>
+<td><input type="submit" value="UPLOAD"/></td>	
+</tr>
+</table>	
+	
+</form>
+
+	<!-- Menu Ends -->
