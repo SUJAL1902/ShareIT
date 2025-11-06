@@ -26,7 +26,7 @@ def sendemail(email,password):
 	
 	s = smtplib.SMTP('smtp.gmail.com', 587) 
 	s.starttls() 
-	s.login("scosmicyt@gmail.com", "fwfjlptqmxexcabo") 
+	s.login("scosmicyt@gmail.com", ".........") 
 	
 	part2 = MIMEText(html, 'html')
 
